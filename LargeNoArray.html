@@ -1,0 +1,30 @@
+<html>
+<head>
+<title>Finding biggest number</title>
+</head>
+<body>
+<script>
+	var numbers = new Array()
+	 numbers[0]=prompt('Enter number 1:',' ')
+	 numbers[1]=prompt('Enter number 2:',' ')
+	 numbers[2]=prompt('Enter number 3:',' ')
+	 numbers[3]=prompt('Enter number 4:',' ')
+	 numbers[4]=prompt('Enter number 5:',' ')
+	 numbers[5]=prompt('Enter number 6:',' ')
+	
+	document.write('Numbers In numbers array:<br>')
+	for(var i=0;i<numbers.length;i++)
+	{
+	document.write(numbers[i]+'<br>')
+	}
+	var large=numbers[0];
+	for(let i=0;i<numbers.length;i++)
+	{
+		if(large<numbers[i])
+		large=numbers[i]
+	}
+	document.write('<br><br>')
+	document.write('Large number is:'+large)
+</script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<html>
+<head>
+<script>
+	function setEmail()
+	{
+		with(document.forms.myform)
+		{
+			if(fname.value.length > 0 && lname.value.length > 0)
+			{
+			console.log('I m here... ')
+				Email.readonly=false
+				Email.value=fname.value.charAt(0)+lname.value+'@gmail.com'
+				Email.readonly=true
+			}
+		}
+	}
+</script>
+</head>
+<body>
+	<form name="myform" form id='1234'>
+	<p>
+		First Name: <INPUT type="text" name="Fname" onchange="setEmail()"/><BR>
+		Last Name: <INPUT type="text" name="Lname" onchange="setEmail()"/><BR>
+		Email: <INPUT type="text" name="Email" readonly=true><BR>
+		<INPUT name="Submit" value="Submit" type="submit"/>
+		<INPUT name="Reset" value="Reset" type="reset">
+	</p>
+	</form>
+</body>
+</html>

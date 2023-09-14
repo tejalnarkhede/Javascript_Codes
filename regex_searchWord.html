@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>Hello, my name is Bobby.</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+   var MyArray;
+  re = /\bBob.*\b /;
+MyArray = re.exec('Hello, my name is Bobby.');
+alert('Welcome, ' + MyArray[0]);
+}
+</script>
+
+</body>
+</html>

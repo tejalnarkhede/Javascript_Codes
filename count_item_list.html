@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Count and display the items of dropdown list</title>
+    <style>
+        body{
+            background-color:linear-gradient(lime,red,purple);
+            font-size:initial;
+        }
+
+    </style>
+
+</head>
+<body>
+    <div class="choice">
+        <center>
+            <p><b>Your Favourite Flowers</b></p>
+     <select id="flowerchoice" onchange="func()">
+    <option value="Rose" >Rose</option>
+    <option value="Periwinkle" >Hibiscus</option>
+    <option value="Lily" >Jasmine</option>
+    <option value="Lotus" >Lotus</option>
+    <option value="Marigold">Marigold</option>
+    <option value="Tulips">Tulips</option>
+    </select>
+    
+        </center>
+  </div>
+  <script>
+      len=document.getElementById("flowerchoice").length;
+      alert("The total count of dropdown list is:"+len);
+      let options=document.getElementById("flowerchoice").options;
+      value=[];
+      for(let i=0;i<options.length;i++)
+      value.push(options[i].value);
+     alert("The vales in drop down list are:"+value);
+     
+
+  </script>
+
+</body>
+</html>

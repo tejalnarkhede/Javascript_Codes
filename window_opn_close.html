@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Window open and close at the same time</title>
+    <script>
+        var windowstatus;
+
+        function window1()
+        {
+            if(windowstatus!='1')
+            {
+                mywin=window.open("https://www.google.com","_blank","width=300px,height=300px,top=300px,left=300px");
+                windowstatus=1;
+            }
+            else
+            {
+                mywin.close();
+                windowstatus='0';
+            }
+        }
+
+    </script>
+</head>
+<body>
+    <p>
+        <input name="openwindow" type="button" value="open/close window" onclick="window1()"/>
+    </p>
+</body>
+</html>

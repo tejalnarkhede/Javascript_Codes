@@ -1,0 +1,117 @@
+<html>
+<title>onchange</title>
+<!--<div id="Tejal" style="background-color: linear-gradient(purple,orange);">-->
+<h1><span style="background-color:purple;color:white">Logics Operation</span></h1>
+<label>Choose Operation</label>
+<select id="logic" onchange="getOption(this.value)">
+<option value="" hidden>Select Operation:</option>
+<option value="Factor">Factor</option>
+<option value="Factorial">Factorial</option>
+<option value="Prime">Prime</option>
+<option value="Reverse">Reverse</option>
+</select>
+<body style="background-color:linear-gradient(rgb(128, 0, 96),orange);text-align: center;">
+    <br><br>
+<div id="input"></div>
+    <br><br>
+<div id="output"></div>
+<!--</div>-->
+
+<script>
+    
+    function getOption(option) {
+    
+        if(option == "Factor")
+        {
+            document.getElementById("input").innerHTML=`
+            <p>
+        <input id="fact" type="number" placeholder="Enter number" oninput="factors(this.value)"></input></p>`
+        }
+
+        if(option == "Factorial")
+       { 
+        document.getElementById("input").innerHTML=`
+           <p>
+    <input id="facto" type="number" placeholder="Enter number" oninput="factorial(this.value)"></input></p>`
+       }
+
+         if(option == "Prime")
+        {
+            document.getElementById("input").innerHTML=`
+            <input id="prime" type="number" placeholder="Enter number" oninput="prime(this.value)"></input></p>`
+        }
+        
+         if(option == "Reverse")
+        {
+            document.getElementById("input").innerHTML=`
+            <input id="reverse" type="number" placeholder="Enter number" oninput="reverse(this.value)"></input></p>`
+        }
+        
+    }
+
+    function factors(value) 
+    {
+        alert(value);
+        var num=value;
+        document.write("The Factors are:");
+
+        for(var i=0;i<=num;i++)
+        {
+            if(num%i == 0)
+            {
+            //document.getElementById("output").innerHTML=i;
+                       document.write(i+'<br>');
+            }
+        }        
+        
+    }
+
+    function factorial(value) 
+    {
+        alert(value);
+        var num=value;
+        let ans=1;
+        if(num==0||num==1)
+            return ans;
+        else
+        {
+            for(let i=num;i>=1;i--)
+            {
+                ans=ans*i;
+                document.getElementById("output").innerHTML="The Factorial is:"+ans;
+            }
+        }    
+    }
+
+    function prime(value)
+    {
+        alert(value);
+        let isPrime=true;
+        if(value===1)
+        document.write("Number is neither Prime nor composite...");
+        for(let i=2;i<value;i++)
+        {
+            if(value%i==0)
+            {
+                isPrime=false;
+                break;
+            }
+        }
+            if(isPrime)
+            document.getElementById("output").innerHTML="Number is Prime...!!!";
+            else
+            document.getElementById("output").innerHTML="Number is Not Prime...!!!";
+        
+    }
+
+    function reverse(value)
+    {
+            alert(value);
+            var num=value.split('').reverse().join('');
+            document.getElementById("output").innerHTML="The Reversed Number is:"+num;
+
+    }
+
+</script>
+</body>
+</html>

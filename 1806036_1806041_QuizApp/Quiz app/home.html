@@ -1,0 +1,47 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<link rel="stylesheet" type="text/css" href="homecss.css">
+<title>Home page</title>
+</head>
+<script>
+Banners=new Array('gpp11.jpg','gpp22.jpg','gpp33.jpg');
+currentBanner=0;
+
+function slideshow()
+{
+    if(document.images)
+    {
+    currentBanner++;
+    if(currentBanner==Banners.length)
+    {
+        currentBanner=0;
+    }
+    document.currentshow.src=Banners[currentBanner];
+    setTimeout("slideshow()",2000);
+    }
+}
+</script>
+
+<body onload="slideshow()">
+    <ul>
+        <li><a class="active" href="home.html">Home</a></li>
+        <li><a href="registerPagecookie.html">Sign Up</a></li>
+        <li><a href="loginPagecookie.html">Sign In</a></li>
+        <li><a href="contactUs.html">Contact Us</a></li>
+        <div id="li">
+        <li>Government Polytechnic Pune </li></div>
+      </ul>
+      <div id="text">
+      
+
+    <center>
+        <img src="gpp1.jfif" height="100%" width="100%" name="currentshow">
+    </center>
+
+
+</div>
+</body>
+</html>

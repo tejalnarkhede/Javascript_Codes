@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insert dashes between two Even digits</title>
+</head>
+<body>
+    <script>
+        let no=prompt("Enter the Number:");
+        let no1=no.split("");
+        alert(no1);
+        let out=""+no1[0];
+        for(i=0,j=1;j<no1.length;i++,j++)
+        {
+            if((isEven(no[i])&&isEven(no[j]))==1)
+            {
+                out=out.concat("-"+no1[j]);
+            }
+            else{
+                out=out.concat(no[j]);
+            }
+        }
+        alert("After Inserting Dashes:"+out);
+
+        function isEven(num) {
+            if(parseInt(num)%2==0)
+            return 1;
+            else
+            return 0;
+        }
+    </script>
+</body>
+</html>

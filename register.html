@@ -1,0 +1,161 @@
+<html>
+ 
+<div class="myclass">
+<div>
+<h2 align="Center" color="red" >Registration Form</h2>
+</div>
+
+<form name="MyForm">
+
+<table align="center" border=2 cellpadding="5" cellspacing="5" bgcolor="gray">
+<tr>
+<td>Customer Name</td><td><input type="text"name="cname" ></td>
+	<tr>
+		
+	<tr>
+<td>Customer Id</td><td><input type="text"name="cid" ></td>
+	<tr>
+	<tr>
+		<td>Password</td><td><input type="password"name="pass"></td>
+	</tr>
+	<tr>
+		<td>Mobile Number</td><td><input type="text" name="mnumber"></td>
+	</tr>
+	<tr>
+		<td>Date Of Birth</td><td>
+	<select name="date">
+	<option>1</option>
+	<option>2</option>
+	<option>3</option>
+	<option>4</option>
+	<option>5</option>
+	<option>6</option>
+	<option>7</option>
+	<option>8</option>
+	<option>9</option>
+	<option>10</option>
+	<option>11</option>
+	<option>12</option>
+	<option>13</option>
+	<option>14</option>
+	<option>15</option>
+	<option>16</option>
+	<option>17</option>
+	<option>18</option>
+	<option>19</option>
+	<option>20</option>
+	<option>21</option>
+	<option>22</option>
+	<option>23</option>
+	<option>24</option>
+	<option>25</option>
+	<option>26</option>
+	<option>27</option>
+	<option>28</option>
+	<option>29</option>
+	<option>30</option>
+	<option>31</option>
+</select>
+ <select name="month">
+<option>Jan</option>
+<option>Feb</option>
+<option>Mar</option>
+<option>Apr</option>
+<option>May</option>
+<option>Jun</option>
+<option>Jul</option>
+<option>Aug</option>
+<option>Sep</option>
+<option>Oct</option>
+<option>Nov</option>
+<option>Dec</option>
+</select><select name="">
+<option>1980</option>
+<option>1981</option>
+<option>1982</option>
+<option>1983</option>
+<option>1984</option>
+<option>1985</option>
+<option>1986</option>
+<option>1957</option>
+<option>1988</option>
+<option>1989</option>
+<option>1990</option>
+<option>1991</option>
+<option>1992</option>
+</select></td>
+
+<tr><td>Address</td><td>
+<textarea rows=7 columns=20 name="t1"></textarea>
+</td></tr>
+<tr>
+<td>Gender</td><td><input type="radio"name="gender" value="male">Male
+<input type="radio"name="gender" value="female">Female</td>
+</tr>
+<tr>
+	<td>Hobbies<td><input type="checkbox"name="Singing">Singing
+<input type="checkbox"name="Dancing">Dancing<br>
+<input type="checkbox"name="Collecting Stamps">
+Collecting Stamps
+</td>
+</tr>
+<tr>
+	<td>
+	
+	<input type="Submit" value="Submit" onclick="validate()">
+	</td>
+</tr>
+</table>
+
+</form>
+</div>
+
+<div align="right">
+</div>
+<a href="Home.html">Home</a>
+
+
+<script type="text/javascript" language="javascript">
+		function validate()
+		{
+		var x = document.forms.myForm.cname.value;
+		var y = document.forms.myForm.cid.value;
+	var m=document.forms.myForm.mnumber.value;
+	var p=document.forms.myForm.pass.value;
+			
+			if (x == null || x == "")
+			 {
+				alert("Please Enter a Username");
+				return false;//return keywork to stop validation no need to check next condition
+			}
+			else if (y == null || y == "") {
+				alert("Please Enter a Password");
+
+				return false;
+			}
+			else if(!(m.match(/^[0-9]+$/)))
+			{
+				alert("Mobile no is not valid");
+				return false;
+			}
+			else if((m.length > 10)) {
+					
+					alert("Enter the valid mo no");
+					//return false;
+			} 
+						
+		}
+		with(document)
+		{
+			write("Hello Naveen...");
+		}
+		
+		
+		
+</script>
+
+
+
+
+
+</html>

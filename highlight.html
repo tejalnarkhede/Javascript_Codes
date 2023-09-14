@@ -1,0 +1,21 @@
+<html>
+<head>
+<script>
+	function highlight(Element)
+	{
+		Element.style.color='blue';
+		Element.style.backgroundColor='silver';
+	}
+</script>
+</head>
+<body>
+	<form>
+	<p>
+	firstname:<input value="Tejal" name="fname" type="text" onchange="highlight(this)"/><br>
+	lastname:<input value="Narkhede" name="lname" type="text" onchange="highlight(this)"/><br>
+	<input name="Submit" value="Submit" type="submit"/>
+	<input name="Reset" Value="Check" type="reset"/>
+	</p>
+	</form>
+</body>
+</html>

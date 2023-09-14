@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Child window</title>
+</head>
+<script>
+function accessParent()
+{
+    var parentvalue=window.opener.document.getElementById("parentid").value;
+    alert('ParentValue is:'+parentvalue);
+}
+
+
+
+</script>
+
+<body>
+    This is Child window
+    <br>
+    <form name="childwindow">
+        <input type="text" id="childid" name="childname" size="20">
+        <br><br>
+        <input type="button" name="Generate" value="Generate" onclick="accessParent()">
+        <input type="hidden" name="dummy_parent_fieldid">        
+    </form>    
+</body>
+</html>

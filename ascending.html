@@ -1,0 +1,20 @@
+<html>
+<body style="text-align:center;">
+<p>Click the button to sort the array</p>
+<button onclick="mysort()">Try it</button>
+<p id="demo"></p>
+<h1>Ascending Order </h1>
+<h1 style="color:green;" id="ascending"></h1>
+<script>
+	var numbers=[12,23,45,11,42];
+	document.getElementById("demo").innerHTML=numbers;
+	
+	function mysort()
+	{
+		numbers.sort();
+		document.getElementById("ascending").innerHTML=numbers;
+	}
+
+</script>
+</body>
+</html>

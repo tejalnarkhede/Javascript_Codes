@@ -1,0 +1,27 @@
+<!DOCTYPE html PUBLIC
+"-//W3C//DTD XHTML 1.0 Transitional//EN">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Write Cookie</title>
+<script language="Javascript" type="text/javascript">
+
+function WriteCookie()
+{
+with (document.CookieWriter)
+{
+document.cookie =
+"CustomerName="+ customer.value+";"
+alert("Cookie Written")
+}
+}
+
+</script>
+</head>
+<body>
+<form name="CookieWriter" action="" >
+Enter your name:
+<input type="text" name="customer"
+onchange="WriteCookie()"/>
+</FORM>
+</body>
+</html>

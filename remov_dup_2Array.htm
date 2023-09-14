@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Merge two arrays and remove all duplicate elements</title>
+</head>
+<body>
+    <script>
+        var a=[10,22,56,43,38,98,89];
+        var b=[20,45,56,36,36,41,89];
+        a=a.concat(b);
+        alert("The concatenated array is:"+a);
+        var unique=[...new Set(a)];//to remove duplicate elements
+        alert("The result after Removing Duplicate Elements:"+unique);
+
+    </script>
+
+</body>
+</html>

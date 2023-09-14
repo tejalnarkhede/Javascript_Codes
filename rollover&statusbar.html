@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rollover with status bar</title>
+    <script>
+        window.status='Hii...All secrets of beauties are revealed..!!!';
+        function OpenNewWindow(flower)
+        {
+            if(flower==1)
+            {
+            document.cover.src="img/rose-wallpapers-hd-imaegs.jpg";
+            MyWindow = window.open('', 'myAdWin', 'titlebar=0,status=0, toolbar=0, location=0,menubar=0,directories=0, resizable=0,height=50, width=150,left=500,top=400');
+            MyWindow.document.write('This is Rose..!!!');
+            }
+            if(flower==2)
+            {
+            document.cover.src="img/Tulips.jpg";
+            MyWindow = window.open('', 'myAdWin', 'titlebar=0,status=0, toolbar=0, location=0,menubar=0,directories=0, resizable=0,height=50, width=150,left=500,top=400');
+            MyWindow.document.write('This is Tulips..!!!');
+            }
+
+        }
+
+
+
+
+
+
+    </script>
+</head>
+<body>
+    <table>
+        <TD>
+            <A onmouseover="OpenNewWindow(1)"
+            onmouseout="MyWindow.close()">
+            <B><U>Java Demystifi ed </U></B>
+            </A>
+            <BR>
+            <A onmouseover="OpenNewWindow(2)"
+            onmouseout="MyWindow.close()">
+            <B><U>OOP Demystifi ed</U></B>
+            </A>
+            <BR>
+            <A onmouseover="OpenNewWindow(3)"
+            onmouseout="MyWindow.close()">
+            <B><U>Data Structures Demystifi ed</U></B>
+            </A>
+            </TD>
+            </TR>
+            </TBODY>
+            </TABLE>
+
+    </table>
+</body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+</head>
+<body>
+    <h1>Registration by cookies</h1>
+    <form action="" name="myform" method="POST">
+        Name:<input type="text" name="name" id="name"><br><br>
+        Password:<input type="password" name="pass" id="pass"><br><br>
+        Email:<input type="email" name="email"><br><br>
+        city:<input type="text" name="city"><br><br>
+        <br><br>
+        <input type="button" value="Create Cookie" name="set" onclick="setCookies()">
+        <input type="button" value="Read Cookie" name="get" onclick="getCookies()">
+        <input type="button" value="Update Cookie" name="get" onclick="UpdateCookie()">
+        <input type="button" value="Delete Cookie" name="get" onclick="DeleteCookie()">
+    </form>
+    <script>
+        function setCookies()
+        {
+            
+            document.cookie="Name=" + document.myform.name.value + "; max-age="+60*60*24*10;
+            document.cookie="Password=" + document.myform.pass.value + "; max-age="+60*60*24*10;
+            document.cookie="Email="+document.myform.email.value + "; max-age="+60*60*24*10;
+            document.cookie="City="+document.myform.city.value + "; max-age="+60*60*24*10;
+            document.myform.name.value='';
+            document.myform.pass.value='';
+            document.myform.email.value='';
+            document.myform.city.value='';
+            alert('Cookie created successfully..');
+        }
+
+        //alert(document.cookie);
+        function getCookies()
+        {
+            
+            var cookiesArray=document.cookie.split(";");
+            //alert(document.cookie);
+            console.log(valueArray);
+            for(var i=0;i<cookiesArray.length;i++)
+            {   
+                var valueArray=cookiesArray[i].split("=");
+                console.log(valueArray);
+                if(valueArray[0].trim()=='Name')
+                document.myform.name.value=valueArray[1];
+                //console.log(valueArray[1]);
+                if(valueArray[0].trim()=='Password')
+                document.myform.pass.value=valueArray[1];
+                if(valueArray[0].trim()=='Email')
+                document.myform.email.value=valueArray[1];
+                //console.log(valueArray[1]);
+
+                if(valueArray[0].trim()=='City')
+                document.myform.city.value=valueArray[1];
+                //console.log(valueArray[1]);
+
+            }
+        }
+
+        function UpdateCookie()
+        {
+           
+            alert('Enter values in all fields to update cookie..');
+            var newname = prompt("Please enter your name");
+            var newpassword = prompt("Please enter your password");
+            var newemail = prompt("Please enter your email");
+            var newcity = prompt("Please enter your city");
+
+            
+            if (newname!="" && newpassword!="" && newemail!="" && newcity!="")
+            {
+            document.cookie="Name=" + newname + "; max-age="+60*60*24*10;
+            document.cookie="Password=" + newpassword + "; max-age="+60*60*24*10;
+            document.cookie="Email="+ newemail + "; max-age="+60*60*24*10;
+            document.cookie="City="+ newcity + "; max-age="+60*60*24*10;
+            alert('Cookie Updated successfully..');
+            }
+           }        
+
+        function DeleteCookie()
+        {
+            document.myform.name.value='';
+            document.myform.pass.value='';
+            document.myform.email.value='';
+            document.myform.city.value='';
+            document.cookie = "Name=; expires=Thu, 01 Jan 1970 00:00:00 UTC;"
+            document.cookie = "Password=; expires=Thu, 01 Jan 1970 00:00:00 UTC;"
+            document.cookie = "Email=; expires=Thu, 01 Jan 1970 00:00:00 UTC;"
+            document.cookie = "City=; expires=Thu, 01 Jan 1970 00:00:00 UTC;"
+            alert('Cookie Deleted Successfully...');
+        }
+
+    </script>
+</body>
+</html> 

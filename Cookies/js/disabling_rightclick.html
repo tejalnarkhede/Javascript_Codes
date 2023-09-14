@@ -1,0 +1,36 @@
+<!DOCTYPE html PUBLIC
+"-//W3C//DTD XHTML 1.0 Transitional//EN">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Lockout Right Mouse Button</title>
+<h1>A security violation message is displayed whenever the visitors clicks the
+right mouse button.</h1>
+
+<script language=JavaScript>
+
+function BreakInDetected(){
+alert('Security Violation')
+return false
+}
+
+document.oncontextmenu=new Function(
+"BreakInDetected();return false")
+
+</script>
+</head>
+<body>
+
+
+
+<cTypeface:Bold><u>Javascript Demystified</U></b>
+</a>
+</font><font face="arial, helvetica, sans-serif"
+size=-1><BR>Jim Keogh / Paperback /
+Osborne McGraw Hill / 352pp.
+<BR>ISBN: 0072254548 May&nbsp;2004
+</td>
+</tr>
+</tbody>
+</table>
+</body>
+</html>

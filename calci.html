@@ -1,0 +1,48 @@
+<html>
+<body style="text-align:center;background-color:blue;">
+<div id="abc" style="text-align:center;background-color:white;color:red;background-position:center;align:center;">
+<h1>Calculator</h1>
+<h1 style="color:red;text-align:center;" id="123"></h1>
+<button onclick="add()">Add </button>
+<button onclick="sub()">Sub</button>
+<button onclick="mul()">Mul</button>
+<button onclick="div()">Div</button>
+
+<div id="456" style="text-align:center;background-color:pink;background-position:center;
+transparent:20% text-weight:30"></div>
+<p id="123" style="text-align: center ; color: hotpink; ">Calculator</p>
+</div>
+<script>
+document.getElementById("456").innerHTML=add();
+
+     var num1=parseInt(prompt('Enter Number1:'));
+    var num2=parseInt(prompt('Enter Number2:'));
+     function add()
+     {  
+            var ans=num1+num2;
+            document.getElementById("456").innerHTML="Answer is:"+ans;
+     }
+		
+	function sub()
+     {  
+            var ans=num1-num2;
+            document.getElementById("456").innerHTML="Answer is:"+ans;
+     }
+	 
+	 function mul()
+     {  
+            var ans=num1*num2;
+            document.getElementById("456").innerHTML="Answer is:"+ans;
+     }
+	 
+	 function div()
+     {  
+            var ans=num1/num2;
+            document.getElementById("456").innerHTML="Answer is:"+ans;
+     }
+
+
+
+</script>
+</body>
+</html>

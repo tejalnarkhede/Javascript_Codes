@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>display multiple windows</title>
+    <script>
+        var windowstatus;
+
+        function launch()
+        {
+           for(var i=0;i<5;i++)
+           {
+               win=window.open(' ','win'+i,'width:50,height:50');
+
+           }
+        }
+
+    </script>
+</head>
+<body>
+    <p>
+        <input name="openwindow" type="button" value="display multiple windows" onclick="launch()"/>
+    </p>
+</body>
+</html>

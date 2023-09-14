@@ -1,0 +1,28 @@
+/*accessing form fields*/
+
+<html>
+<head>
+<body>
+	<form action="" name="myform" id="Tejal123">
+	username:<input type="text" name="usrfield" id="123" value="Tejal"><br><br>
+	password:<input type="text" name="passfield" id="456"><br><br>
+	<input type="submit" name="submitbtn" value="Submit">
+	</form>
+	<script>
+		
+		var usrname=document.getElementById('123');
+		console.log(usrname);
+		console.log("usrname.name:"+usrname.name);
+		console.log("usrname.type:"+usrname.type);
+		var usrname1=document.myform.elements[2];
+		console.log(usrname1);
+		var usrname2=document.myform.elements['passfield'];
+		var usrname3=document.myform.usrfield;
+		console.log(usrname2);
+		console.log(usrname3);
+		
+	
+	</script>
+</body>
+</head>
+</html>

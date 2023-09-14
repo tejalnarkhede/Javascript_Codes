@@ -1,0 +1,21 @@
+<html>
+<body style="text-align:center;">
+<h1 style="color:blue;">Factorial of number</h1>
+	
+	<p>Click the button to display the power of number</p>
+	
+	<button onclick="power()">calculate</button>
+	
+	<p id="demo" style="font-size:25px; font-weight:bold ;"></p>
+	
+	<script>
+	function power()
+	{
+		var n=parseInt(prompt('Enter the number You Want: '));
+		var p=parseInt(prompt('Enter the Index you want: '));
+		document.getElementById("demo").innerHTML=Math.pow(n,p);
+	
+	}
+	</script>
+	</body>
+</html>

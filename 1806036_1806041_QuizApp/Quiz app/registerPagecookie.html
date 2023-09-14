@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+    <link rel="stylesheet" type="text/css" href="regcss.css">
+</head>
+<script>
+    function ValidateName() {
+		re = /^[A-Za-z]+$/
+        var fname = document.register.fname.value;
+      
+		if (re.test(fname)) {
+			window.document.forms.register.fname.style.backgroundColor = 'lightgreen'
+
+		} else {
+			window.document.forms.register.fname.value = ""
+			alert('Enter Valid First Name!\nEg: Tejal')
+
+		}
+	}
+	function ValidateSName() {
+		re = /^[A-Za-z]+$/
+        var lname = document.register.lname.value;
+      
+		if (re.test(lname)) {
+			window.document.forms.register.lname.style.backgroundColor = 'lightgreen'
+
+		} else {
+			window.document.forms.register.lname.value = ""
+			alert('Enter Valid Surname!\nEg: Narkhede')
+
+		}
+    }
+    
+    function ValidateUsername() {
+		re = /^[a-zA-Z0-9\_]+$/
+		var uname = document.register.uname.value;
+		if (re.test(uname)) {
+			window.document.forms.register.uname.style.backgroundColor = 'lightgreen'
+
+		} else {
+			window.document.forms.register.uname.value = ""
+			alert('Username can only contain alpha numeric characters and Underscore as a special symbol!')
+
+		}
+	}
+	function ValidatePassword() {
+		re = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/
+		var pass = document.register.pass.value;
+		if (re.test(pass)) {
+			window.document.forms.register.pass.style.backgroundColor = 'lightgreen'
+
+		} else {
+			window.document.forms.register.pass.value = ""
+			alert('Enter Password containing: \nMinimum eight characters, at least one uppercase letter, one lowercase letter, one number and one special character!')
+
+		}
+	}
+
+</script>
+
+<body>
+   
+    <form action="loginPagecookie.html" name="register" method="GET">
+        <div class="container">
+            <h1>Register</h1>
+            <p>Please fill in this form to create an account.</p>
+            <hr>
+        <Label>First Name:<Label>
+        <input type="text" name="fname" id="fname" placeholder="Enter First Name" minlength="2" maxlength="20" onblur="ValidateName()"  required>
+        <label>Last Name:</label>
+        <input type="text" name="lname" id="lname" placeholder="Enter Last Name" minlength="2" maxlength="20" onblur="ValidateSName()" required>
+        <label>Username:</label>
+        <input type="text" name="uname" id="uname" placeholder="Enter User Name" minlength="5" maxlength="10"
+        onblur="ValidateUsername()" required>
+        <label>Password:</label>
+        <input type="password" name="pass" id="pass" placeholder="Enter Password" minlength="8" maxlength="16"
+        onblur="ValidatePassword()" required>
+        <label>Email:</label>
+        <input type="text" name="email" id="email" placeholder="Enter Email" ><br>
+        <label>Location</label>
+        <select id="loc" placeholder="Please select">
+        <option value="Andhra Pradesh" >Andhra Pradesh</option>
+    <option value="Assam" >Assam</option>
+    <option value="Bihar & Jharkhand" >Bihar & Jharkhand</option>
+    <option value="Chennai" >Chennai</option>
+    <option value="Delhi">Delhi</option>
+    <option value="Gujarat">Gujarat</option>
+    <option value="Haryana">Haryana</option>
+    <option value="Himachal Pradesh">Himachal Pradesh</option>
+    <option value="Karnataka">Karnataka</option>
+    <option value="Kerala">Kerala</option>
+    <option value="Kolkata">Kolkata</option>
+    <option value="Madhya Pradesh">Madhya Pradesh</option>
+    <option value="Maharashtra">Maharashtra</option>
+    <option value="North East">North East</option>
+    <option value="Orissa">Orissa</option>
+    <option value="Panjab">Panjab</option>
+    <option value="Rajasthan">Rajasthan</option>
+    </select>
+    <br>
+        <label>city:</label>
+        <input type="text" name="city" placeholder="Enter city" required>
+        <!--<div id="checkbox">
+        <input type="checkbox" aria-checked="false" id="agree" name="agree"> <label>Remember me</label>
+        </div>-->
+        <input type="checkbox" aria-checked="false" id="agree" name="agree">
+        <label for="agree"> Remember me</label><br>
+        <br>
+          <script>
+          document.getElementById('agree').onclick = function() {
+            // access properties using this keyword
+            if ( this.checked ) {
+                
+                document.cookie="fname=" + document.register.fname.value + "; max-age="+60*60*24*10;
+                document.cookie="lname=" + document.register.lname.value + "; max-age="+60*60*24*10;
+                document.cookie="username="+document.register.uname.value + "; max-age="+60*60*24*10;
+                document.cookie="password="+document.register.pass.value + "; max-age="+60*60*24*10;
+                document.cookie="Email="+document.register.email.value + "; max-age="+60*60*24*10;
+                document.cookie="location="+document.register.loc.value + "; max-age="+60*60*24*10;
+                document.cookie="city="+document.register.city.value + "; max-age="+60*60*24*10;
+    /*            document.register.fname.value='';
+                document.register.lname.value='';
+                document.register.uname.value='';
+                document.register.pass.value='';
+                document.register.email.value='';
+                document.register.loc.value='';
+                document.register.city.value='';
+               */ 
+              alert("Your data is stored sucessfully in cookie..!")
+            }    
+            else {
+                // Returns false if not checked
+                alert('You will be not remembered..!')
+            }
+        };
+    </script>
+        <input type="submit" value="submit" id="id01" class="registerbtn" onclick="document.getElementById('id01').style.display='block'" style="width:100%;">
+    
+
+
+       <!-- <input type="button" value="Get Information" name="get" onclick="getCookies()">
+        -->
+    </div>
+
+    <div class="container signin">
+        <p>Already have an account? <a href="loginPagecookie.html">Sign in</a>.</p>
+      </div>
+    </form>
+    
+</body>
+</html> 

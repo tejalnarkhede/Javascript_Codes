@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<title>Unit Converter</title>
+<body>
+
+<h1><span style="color:white; background-color:green">Unit Converter</span></h1>
+<p>Choose Unit to Convert here...</p>
+
+
+  <label>Choose Unit:</label>
+  <select id="cars" onchange=>
+  <option value="Temperature">Temperature </option>
+  <option value="Length">Length</option>
+  <option value="Speed">Speed</option>
+  <option value="Weight">Weight</option>
+  </select>
+  
+
+  <div id="temp" name="temp">
+ <p>
+  <label><p>Enter in Fahrenheit:<span id="templbl"></span></p></label>
+  <input id="inputUnit" type="number" placeholder="Fahrenheit" oninput="temperatureConverter(this.value)" onchange="temperatureConverter(this.value)">
+</p>
+<p>Celcius: <span id="outputCelcius"></span></p>
+<p>Kelvin: <span id="outputKelvin"></span></p>
+
+<label><p>Enter in Meters:<span id="templbl"></span></p></label>
+  <input id="inputUnit1" type="number" placeholder="Meters" oninput="temperatureConverter(this.value)" onchange="temperatureConverter(this.value)">
+</p>
+<p>Celcius: <span id="outputCelcius"></span></p>
+<p>Kelvin: <span id="outputKelvin"></span></p>
+
+
+
+</div>
+<script>
+
+//var e=document.getElementById("cars");
+  //var result=e.options[e.selectedIndex].value;
+  //alert(result); 
+
+
+    function getOption(valNum) 
+    {
+
+        if(option == "Temperature")
+        {
+            function temperatureConverter(valNum)
+            {
+            valNum = parseFloat(valNum);
+            document.getElementById("outputCelcius").innerHTML=(valNum-32)/1.8;
+            document.getElementById("outputKelvin").innerHTML=(valNum-32/1.8)+273.15;
+            }
+        }
+
+        if(option == "length")
+        {
+            <label><p>Enter in meteres:<span id="templbl1"></span></p></label>
+  <input id="inputUnit" type="number" placeholder="meteres" oninput="temperatureConverter(this.value)" onchange="temperatureConverter(this.value)">
+</p>
+<p>Celcius: <span id="outputCelcius"></span></p>
+<p>Kelvin: <span id="outputKelvin"></span></p>
+
+        }
+
+    }
+
+</script>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+
+<html>
+  
+<head>
+
+    <title>Document</title>
+    
+<script type="text/javascript">
+
+ function openNewWin()
+      
+{
+        
+with(document.forms.Images)
+        
+       {
+         
+             if(imgList[0].selected)
+          
+               window.open("img/rose-wallpapers-hd-imaegs.jpg","image 1","height=500,width=500");
+          
+            else if(imgList[1].selected)
+           
+               window.open("img/Hibiscus-Beautiful-White-Flowers.jpg","image 1","height=500,width=500")
+         
+           else if(imgList[2].selected)
+           
+               window.open("img/jasmine.jpg","image 1","height=500,width=500")
+       
+      }
+      
+}
+
+    
+</script>
+  
+</head>
+  
+<body >
+    
+<h3>Create option list containing list of images and then display images in new window as per selection. <hr> </h3>
+  
+<!--Form-->
+    
+<form action="" method="post" name="Images">
+     
+<label for="DropDown">
+<b>Choose a Image: </b></label>
+
+     
+          <select name="imgList">
+        
+          <option value="1">1</option>
+       
+          <option value="2">2</option>
+       
+          <option value="3">3</option>
+     
+          </select>
+<br><br>
+     
+         <input type="button" name="done" value="Done" onclick="openNewWin()">
+      
+         <input type="reset" name="reset" value="Reset">
+
+    
+         </form>
+ 
+</body>
+ 
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html PUBLIC
+"-//W3C//DTD XHTML 1.0 Transitional//EN">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Open New Window</title>
+<script language="Javascript" type="text/javascript">
+
+function OpenNewWindow() {
+MyWindow = window.open('MyWebSite/MyAd.jpg',
+'myAdWin', 'status=0, toolbar=0, location=0,menubar=0, directories=0, resizable=0,height=250, width=250,scrollbars=1')
+
+this.focus()
+}   
+
+</script>
+</head>
+<body>
+<FORM action="http://www.jimkeogh.com" method="post">
+<P>
+<INPUT name="OpenWindow" value="Open Window"
+type="button" onclick="OpenNewWindow()"/>
+</P>
+</FORM>
+</body>
+</html>

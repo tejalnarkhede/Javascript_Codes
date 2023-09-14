@@ -1,0 +1,25 @@
+<html>
+<head>
+<title>Onblur event</title>
+<script>
+function validate_email(e)
+{
+	var location=e.indexOf('@')
+	if(location==-1)
+		alert('You entered inaccurate email address..')
+}
+</script>
+</head>
+<body>
+<form>
+	<p>
+	first name:<input type="text" id="fname"><br><br>
+	last name:<input type="text" id="Lname"><br><br>
+	email:<input type="text" id="email" onblur="validate_email(this.value)"><br><br>
+	<input name="Submit" value="submit" type="Submit">
+	<input name="Reset" value="Reset" type="Reset">
+	</p>
+</form>
+</body>
+</html>
+

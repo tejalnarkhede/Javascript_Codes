@@ -1,0 +1,32 @@
+    <!DOCTYPE html PUBLIC
+"-//W3C//DTD XHTML 1.0 Transitional//EN">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Banner Ads</title>
+<script language="Javascript" type="text/javascript">
+
+Banners=new Array('img/jasmine.jpg','img/Tulips.jpg','img/Hibiscus-Beautiful-White-Flowers.jpg');
+currentBanner=0;
+
+function slideshow()
+{
+    if(document.images)
+    {
+    currentBanner++;
+    if(currentBanner==Banners.length)
+    {
+        currentBanner=0;
+    }
+    document.currentshow.src=Banners[currentBanner];
+    setTimeout("slideshow()",1000);
+    }
+}
+</script>
+</head>
+<body onload="slideshow()">
+    <center>
+        <img src="img/Tulips.jpg" height="0%" width="70%" name="currentshow">
+    </center>
+
+</body>
+</html>

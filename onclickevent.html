@@ -1,0 +1,32 @@
+<html>
+<head>
+ <title>Accessing form attributes</title>
+ <script language="Javascript" type="text/javascript">
+ <!--
+ function display()
+ {
+ alert
+ ('Value: ' + document.forms.order.Reset.value)
+ }
+ 
+ function displaymsg()
+ {
+	alert("Thank You,Your Form is submitted successfully...!!!")
+ }
+ -->
+ </script>
+</head>
+ <body>
+ <FORM action=
+ "http://www.jimkeogh.com" method="post" name="order">
+ <P>
+ First Name: <INPUT type="text" name="Fname"/><BR>
+ Last Name: <INPUT type="text" name="Lname"/><BR>
+ Email: <INPUT type="text" name="Email"/><BR>
+ <INPUT name="Submit" value="Submit" type="submit" onclick="displaymsg()" />
+ <INPUT name="Reset" value="Reset"
+ type="reset" onclick="display()"/>
+ </P>
+ </FORM>
+ </body>
+</html>

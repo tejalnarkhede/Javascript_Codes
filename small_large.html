@@ -1,0 +1,63 @@
+<html>
+<body="text-align:center;">
+<p>Click the button to see the result</p>
+<p id="demo" style="font-size:25px; font-weight:bold ; font-color:red;"></p>
+<button onclick="largefunction()">result</button>
+
+<script>
+	
+		var numbers=new Array();
+		
+		numbers[0]=prompt('Enter number 1:',' ');
+		numbers[1]=prompt('Enter number 2:',' ');
+		numbers[2]=prompt('Enter number 3:',' ');
+		numbers[3]=prompt('Enter number 4:',' ');
+		numbers[4]=prompt('Enter number 5:',' ');
+		numbers[5]=prompt('Enter number 6:',' ');
+		numbers[6]=prompt('Enter number 7:',' ');
+		numbers[7]=prompt('Enter number 8:',' ');
+		numbers[8]=prompt('Enter number 9:',' ');
+		numbers[9]=prompt('Enter number 10:',' ');
+		numbers[10]=prompt('Enter number 11:',' ');
+		numbers[11]=prompt('Enter number 12:',' ');
+		numbers[12]=prompt('Enter number 13:',' ');
+		numbers[13]=prompt('Enter number 14:',' ');
+		numbers[14]=prompt('Enter number 15:',' ');
+		
+	document.write('<br><br>')	
+	document.write('Numbers In numbers array:<br>')
+	for(let i=0;i<numbers.length;i++)
+	{
+	document.write(numbers[i]+'<br>')
+	}
+		
+	
+	function largefunction()
+	{	
+		
+	var largest=Math.max(...numbers);
+	var smallest=Math.min(...numbers);
+	
+	var fr = new Array(numbers.length);
+	document.write('Large number is:'+largest);
+	document.write('<br><br>');
+	document.write('Small number is:'+smallest);
+	var countL=0, countS=0;
+	for(let i=0;i<numbers.length;i++)
+	{
+		if(largest == numbers[i]){
+			countL++;
+		}else if(smallest == numbers[i]){
+			countS++;
+		}
+	}
+	
+	document.write('<br><br>');
+	document.write('The frequency of Largest Number '+largest+' is : '+countL);
+	document.write('<br><br>')
+	document.write('The frequency of Smallest Number '+smallest+' is : '+countS);
+	}
+	
+</script>
+</body>
+</html>

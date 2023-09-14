@@ -1,0 +1,27 @@
+
+
+<html>
+<head>
+<title>Email validation using regex</title>
+<script type="text/javascript">
+    function validate() {
+        var e1 = document.getElementById("email").value;
+        var pattern = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+        if (pattern.test(e1)) {
+            alert("You entered this Email id : "+e1);
+            alert("Entered email id is Valid!")
+            return true;
+        }
+        alert("Entered email id is Invalid !");
+        return false;
+
+    }
+</script>
+
+</head>
+<body>
+Enter Email Id. :
+<input type="text" name="email" id="email" />
+<input type="submit" value="Check" onclick="validate();" />
+</body>
+</html>

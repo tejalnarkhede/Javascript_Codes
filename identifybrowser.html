@@ -1,0 +1,29 @@
+
+<html>
+<head>
+<title>Identifying Browser</title>
+</head>
+<body style="text-align:center;">
+	<div id="di1" style="background-color: cadetblue;color: red;"></div>
+<script>
+	alert("Your browser:"+navigator.appName)
+	if(navigator.appName=='Microsoft Internet Explorer')//appname is used to identify browser name
+	{
+		alert('Internet Explorer'+navigator.userAgent)
+		//userAgent property is used for identify version of browser
+	}
+
+	if(navigator.appName=='Google Chrome')
+	{
+		alert('Google Chrome'+navigator.userAgent)
+	}
+	if(navigator.appName=='Netscape')
+	{
+		
+		alert("appname is :"+navigator.appName+" and  Appcodename is:"+navigator.appCodeName);
+		alert("Useragent:"+navigator.userAgent);
+		alert("platform: "+navigator.platform);
+	}
+</script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<html>
+	<head></head>
+	<body>
+	 
+	</body>
+	<script>
+		var num= parseInt(prompt('Enter the Number:',' '));
+		
+		var rem,temp, final=0;
+		temp = num;
+		while(num>0){
+			rem = num%10;
+			num = parseInt(num/10);
+			final = final*10+rem;
+		}
+		if(final==temp){
+			window.alert("Input number is palindrome");
+		}else{
+			window.alert("Input number is not palindrome");
+		}
+		
+		
+	</script>
+</html>

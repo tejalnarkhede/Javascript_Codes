@@ -1,0 +1,12 @@
+<html>
+<head>
+<title>changing elements based on value entered by user</title>
+<script>
+	function setEmail()
+	{
+		if(fname.value.length > 0 && lname.value.length > 0)
+	}
+
+</script>
+</head>
+</html>

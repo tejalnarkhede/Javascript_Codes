@@ -1,0 +1,36 @@
+<html>
+
+<body style="text-align:center; text-color:red">
+<p>Click the button to see the result</p>
+<p id="demo" style="text-align:center; text-color:blue;"></p>
+<button onclick="myfunc()">Try it</button>
+
+<script>
+
+	var num=parseInt(prompt('Enter the positive number:'));
+	document.getElementById("demo").innerHTML;
+	function myfunc()
+	{
+	if(num==1)
+			document.write("1 is neither prime nor composite number...");
+			
+		if(num>1)
+		{
+			for(let i=2;i<num;i++)
+			{
+				if(num%i==0)
+					flag=1;
+			}
+			document.write('<br><br>')
+			if(flag==1)
+				document.write("Input number is Not Prime<br>")
+			else
+				document.write("Input number is Prime<br>");
+			if(num%2==0)
+				document.write("Input number is Even also...<br>")
+			else
+				document.write("Input number is odd also...<br>")
+		}
+	}	
+</script>
+</html>

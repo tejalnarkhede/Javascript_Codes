@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo if Time</title>
+</head>
+<body>
+    Enter Number=<input id="no" placeholder="Type Something..." input type="text" size="50" maxlength="30" ><br><br>
+    <input type="submit" value="Submit" onclick="display()">
+    <input type="submit" value="LoopEx" onclick="loopDemo()">
+</body>
+
+<div id="time">
+    Time:
+</div>
+
+<script>
+    function display()
+    {
+        var day=new Date().getDay();
+        var day1=new Date().getMonth();
+        var day2=new Date().getFullYear();
+        var time=new Date().getTime();
+
+        alert('Day is:'+day);
+        alert('Month is:'+day1);
+        alert('Year is:'+day2);
+        document.getElementById("time").innerHTML=time;
+          switch(day)
+        {
+            case 0:
+            x='Today is Monday';
+                break;
+
+            case 1:
+            x='Today is Tuesday';
+                break;
+
+            case 2:
+            x='Today is Wednesday';
+                break;
+
+            case 3:
+            x='Today is Thursday';
+                break;
+
+            case 4:
+            x='Today is Friday';
+                break; 
+
+            case 5:
+            x='Today is Saturday';
+                break;
+
+            case 6:
+            x='Today is Sunday Enjoy...';
+                break;
+
+            dafault:alert('You are Mental');
+        }
+        alert(x);
+    }  
+
+    function loopDemo()
+    {
+        alert('Hello Tejal..!!!');
+    }  
+    
+</script>
+
+</html>

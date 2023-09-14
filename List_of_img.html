@@ -1,0 +1,82 @@
+<!--- Create option list containing list of images and then display images in new window as per selection.-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Statement 2</title>
+    <Style>
+      body{
+        background-color: #4158D0;
+background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+     padding: 20%;
+         margin: 0%;  
+         font-size: 23px;
+         color: yellow;
+      }
+      p{
+        color:rgb(7, 7, 7);
+        font-style: bold;
+        font-size: 26px;
+        font-family: 'Courier New', Courier, monospace;
+      }
+      select
+      {
+        height: 40px;
+        width: 280px;
+      }
+      button
+      {
+        height: 30px;
+        width: 130px;
+      }
+      .imgawindow{
+          height: 100px;/*300*/
+          width: 200px;/*400*/
+          left: 200px;
+      }
+    </Style>
+</head>
+<body id="body">
+  <div class="choice">
+        <center>
+            <p><b>Choose Your Favourite Flower</b></p>
+          <select id="flowerchoice" onchange="imga()">
+    <option value="Rose" >Rose</option>
+    <option value="Hibiscus" >Hibiscus</option>
+    <option value="Jasmine" >Jasmine</option>
+    <option value="Tulips" >Tulips</option>
+    </select>
+    
+        </center>
+  </div>
+  <div class="imgawindow">
+      
+  </div>
+  <script>
+    
+    function imga()
+    {
+       var carval=document.getElementById("flowerchoice").value;
+       alert(carval);
+       if(carval=="Rose")
+       {
+        document.body.style.backgroundImage = "url(img/rose-wallpapers-hd-imaegs.jpg)";
+       }
+       else if(carval=="Hibiscus")
+       {
+        document.body.style.backgroundImage = "url(img/Hibiscus-Beautiful-White-Flowers.jpg)";
+       }
+       else if(carval=="Jasmine")
+       {
+        document.body.style.backgroundImage = "url(img/jasmine.jpg)"
+       }
+       else if(carval=="Tulips")
+       {
+        document.body.style.backgroundImage = "url(img/Tulips.jpg)";
+       }
+       
+    }
+       </script>
+  </body>
+</html>

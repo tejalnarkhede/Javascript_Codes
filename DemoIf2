@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Onclick Table..</title>
+</head>
+<body>
+    <div id="data">
+        <input id='in1' size=60>
+        <input id='in2' size=60>
+        <button type="submit" onclick="display()">Submit</button>
+    </div>
+    <br>
+
+    <div id="table11">
+    <table id="table1" border="2" >
+        <th id="th1"></th><th id="th2"></th>
+        <tr>
+            <td td="td1"></td>
+            <td id="td2"></td>
+        </tr>
+    </table>
+    </div>
+    <script>    
+    function display()
+    {
+        var fn=document.getElementById("in1").value;
+        var ln=document.getElementById("in2").value;
+
+        document.getElementById("th1").innerHTML="First Name";
+        document.getElementById("th2").innerHTML="Last Name";
+
+        document.getElementById("td1").innerHTML=fn;
+        document.getElementById("td2").innerHTML=ln;
+
+    }
+</script>
+</body>
+</html>

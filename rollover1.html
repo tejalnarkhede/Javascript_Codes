@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mouseover and mouseout event</title>
+    <script>
+        function setNewImage()
+        {
+            document.getElementById("imgid").innerHTML="Hii cursor is on me!!!"
+            //document.getElementById("imgid").src="img/rose-wallpapers-hd-imaegs.jpg";
+        }
+
+        function setOldImage()
+        {
+            document.getElementById("imgid").innerHTML="Hii cursor out off me!!!"
+         //   document.getElementById("imgid").src="img/Hibiscus-Beautiful-White-Flowers.jpg";
+        }
+
+    </script>
+</head>
+<body>
+    <center>
+    <div id="imgid" onmouseover="setNewImage()" onmouseout="setOldImage()" 
+    width="500">
+    <h1>Hii cursor out off me!!!</h1>
+    </div>
+</center>
+    <!--src="img/Hibiscus-Beautiful-White-Flowers.jpg"-->
+</html>

@@ -1,0 +1,40 @@
+<html>
+<head>
+<title>Factorial of number using javascript</title>
+</head>
+<body style="text-align:center;">
+<h1 style="color:green;">Factorial of number</h1>
+
+<p id="GFG_UP" style="font-size:15px; font-weight:bold;"></p>
+
+<button onclick="GFG_Fun()">Click here</button>
+
+<p id="GFG_Down" style="color:green; font-size:20px;font-weight:bold;"></p>
+
+<script>
+
+  var up=document.getElementById('GFG_UP');
+  var down=document.getElementById('GFG_Down');
+  var n=parseInt(prompt('Enter a positive Integer: '));
+  up.innerHTML="Click on the button to calculate the factorial of n.<br>n= "+n;
+  
+  function factorial(n)
+  {
+	var ans=1;
+	for(var i=2;i<=n;i++)
+	{
+		ans=ans*i;
+		
+	}
+	return ans;
+  }
+  
+  function GFG_Fun()
+  {
+	down.innerHTML=factorial(n);
+  }
+  
+
+</script>
+</body>
+</html>

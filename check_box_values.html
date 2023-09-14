@@ -1,0 +1,59 @@
+<!-- Write a JavaScript to identify the check box selection. Display which check boxes are selected.-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Problem Statement 4</title>
+</head>
+<style>
+body{
+    background-color: #4158D0;
+    background-image: linear-gradient(43deg, Pink, purple, red);
+    padding: 15%;
+     margin: 0%;  
+     font-size: 23px;
+     color: yellow;
+  }
+    input
+  {
+    height: 20px;
+    width: 180px;
+    padding: 0%;
+    align-items: center;
+  }
+</style>
+<body>
+    <center>
+    <p>    Which Car You Like</p>
+      <input type="checkbox" name="car" id="volvo" value="Volvo" onclick="displayselcted()">
+      <label for="volvo">Volvo</label>
+       <br> <br>
+      <input type="checkbox" name="car" id="audi" value="Audi" onclick="displayselcted()">
+      <label for="audi">Audi</label>
+      <br> <br>
+      <input type="checkbox" name="car" id="gloster" value="Gloster" onclick="displayselcted()">
+      <label for="gloster">Gloster</label>
+      <br> <br> 
+      <input type="checkbox" name="car" id="bmw" value="BMW" onclick="displayselcted()">
+      <label for="bmw">BMW</label>
+      <br> <br>
+       <p id="result">
+
+       </p>
+</center> 
+</body>
+</html>
+<script>
+function displayselcted()
+{
+  var ele = document.getElementsByName('car'); 
+              
+              for(i = 0; i < ele.length; i++) { 
+                  if(ele[i].checked) 
+                  document.getElementById("result").innerHTML
+                          ="You Selected "+ele[i].value; 
+              } 
+}
+
+</script>

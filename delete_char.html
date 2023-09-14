@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Removing character at specified position</title>
+</head>
+<body style="text-align: center;">
+    <div style="background-color: chartreuse;"> 
+    
+    <h1 style="color: blue;">Removing charater at specified position</h1>
+    <p>Original String is : Srushti</p>
+    <p>New String is : <span id="output"></span></p>
+    <button onclick="remove_character()" value="Remove Character">Remove Character</button>
+    
+    </div>
+
+<script>
+    function remove_character() {
+         str1='Srushti';
+         str2=str1.replace('u',' ');
+         document.getElementById('output').innerHTML=str2;
+        
+    }
+   
+</script>
+</body>
+</html>

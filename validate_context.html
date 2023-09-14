@@ -1,0 +1,96 @@
+<!---  Write a JavaScript, to validate the contents of text boxes as user changes the focus from text boxes.-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Problem Statement 4</title>
+</head>
+<style>
+body{
+    background-color: #4158D0;
+    background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+    padding: 20%;
+     margin: 0%;  
+     font-size: 23px;
+     color: yellow;
+  }
+    input
+  {
+    height: 40px;
+    width: 280px;
+    padding: 0%;
+    font-size: 25px;
+    align-items: center;
+  }
+  p
+  {
+    color:blue;
+    padding: 0%;
+  }
+  .invalid
+   {
+      border: solid 3px red; 
+    }
+  #error { color: red }
+button
+{
+  height: 30px;
+  width: 180px;
+}
+</style>
+<body>
+    <center>
+    
+    <p> Enter Email Id :-</p><input type="text" id="input" onmouseover="enter()" onmouseout="out()">
+    <br> <br>
+    <div id="error"></div>
+    <br><br>
+    
+    <p> Enter Name :-</p><input type="text" id="input" onmouseover="enter()" onmouseout="out()">
+    <br> <br>
+    <div id="error"></div>
+    <br><br>    
+    <button id="but"  onmouseout="mout()" onselect="click()"> Okay </button>  
+</center> 
+</body>
+</html>
+<script>
+
+  input.onblur = function() {
+    if (!input.value.includes('@')) { 
+      input.classList.add('invalid');
+      document.getElementById('input').style.backgroundColor="tomato";
+      document.getElementById("error").innerHTML = 'Please enter email Id in correct format...'
+    }
+  };
+  
+  input.onfocus = function() {
+    if (this.classList.contains('invalid')) {  
+      this.classList.remove('invalid');
+      error.innerHTML = "";
+    }
+  };
+ function enter()
+ {
+   document.getElementById('input').style.backgroundColor="#5c8a8a";
+ }
+ function out()
+ {
+   document.getElementById('input').style.backgroundColor="white";
+ }
+ function menter()
+ {
+   document.getElementById('but').style.backgroundColor="#e9a424";
+ }
+ function mout()
+ {
+   document.getElementById('but').style.backgroundColor="white";
+ }
+ function click()
+
+ {
+   document.getElementById('but').style.backgroundColor="#5c8a8a";
+ }
+ 
+  </script>

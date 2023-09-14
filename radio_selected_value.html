@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-image:linear-gradient( lime,red,purple,yellow) ;
+            font-size:23px;
+            text-align: center;
+        }
+        #result
+        {
+            background-color:coral;
+        }
+    </style>
+</head>
+<body>
+    <div class="choice">
+        <center>
+            <p><b>Choose Your Favourite Color</b></p>
+            <input type="radio" name="color" value="Blue" onclick="radio_value()">
+            <label>Blue</label>
+            <input type="radio" name="color" value="Pink" onclick="radio_value()">
+            <label>Pink</label>
+            <input type="radio" name="color" value="Red" onclick="radio_value()">
+            <label>Red</label>
+            <input type="radio" name="color" value="Yellow" onclick="radio_value()">
+            <label>Yellow</label>
+            <input type="radio" name="color" value="Orange" onclick="radio_value()">
+            <label>Orange</label>
+            
+                </center>
+          </div>
+
+        </center>
+  </div>
+  <br><br>
+  <div id="result"></div>
+</body>
+</html>
+
+<script>
+    function radio_value()
+    {
+        var val=document.getElementsByName('color');
+
+        for(i=0;i<val.length;i++)
+        {
+            if(val[i].checked)
+            document.getElementById("result").innerHTML="You Selected "+val[i].value;
+        }
+    }
+
+
+</script>

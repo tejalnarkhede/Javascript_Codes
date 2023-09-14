@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Open_focus_blur</title>
+</head>
+<body>
+    <button id="openbtn">Open Window</button>
+    <button id="focusbtn">Focus</button>
+    <button id="blurbtn">blur</button>
+    <script>
+        var mywindow;
+        function openwin()
+        {
+            mywindow=window.open("https://www.google.com","_blank","width=200,height=200,left=300px,top:400px");
+        }
+
+        function focuswin()
+        {
+            mywindow.focus();
+        }
+
+        function blurwin()
+        {
+            mywindow.blur();
+        }
+
+        document.getElementById("openbtn").addEventListener("click",openwin);
+        document.getElementById("focusbtn").addEventListener("click",focuswin);
+        document.getElementById("blurbtn").addEventListener("click",blurwin);
+
+        
+    </script>
+
+</body>
+</html>

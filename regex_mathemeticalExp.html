@@ -1,0 +1,36 @@
+<!--  
+    ^([-+/*]\d+(\.\d+)?)
+
+^ - beginning of the string
+[-+/*] - one of these operators
+\d+ - one or more numbers
+(\.\d+)? - an optional dot followed by one or more numbers
+()* - the whole expression repeated zero or more times
+
+-->
+
+<html>
+<head>
+<title>Mathemetical Expression validation using regex</title>
+<script type="text/javascript">
+    function validate() {
+        var exp = document.getElementById("exp").value;
+        var pattern = /^([-+/*]\d+(\.\d+)?)/;
+        if (pattern.test(exp)) {
+            alert("You entered this mathemetical expression : "+exp);
+            alert("Mathematical expression is Valid!")
+            return true;
+        }
+        alert("Mathemetical Expression is Invalid !");
+        return false;
+
+    }
+</script>
+
+</head>
+<body>
+Enter Mathematical Expression. :
+<input type="text" name="exp" id="exp" />
+<input type="submit" value="Check" onclick="validate();" />
+</body>
+</html>

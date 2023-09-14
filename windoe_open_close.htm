@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Open and close window</title>
+</head>
+<body>
+    <button onclick="openwindow()">Open window</button>
+    <button onclick="closewindow()">Close window</button>
+    <script>
+    
+    var mywindow;
+        function openwindow()
+        {
+             mywindow=window.open("http://www.google.com","","height:200px,width:300px");//bydefault name field _blank aste
+            console.log(mywindow);
+        } 
+
+        function closewindow()
+        {
+            mywindow.close();
+        }
+
+
+    </script>
+</body>
+</html>

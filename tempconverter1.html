@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<title>Unit Converter</title>
+<body>
+    <h1>
+      <span style="color:white; background-color:green">Unit Converter</span>
+    </h1>
+    
+    <p>Choose Unit to Convert here...</p>
+
+    <label>Choose Unit:</label>
+    <select id="cars" onchange="getOption(this.value)">
+      <option value="" hidden>Select unit</option>
+      <option value="Temperature">Temperature </option>
+      <option value="Length">Length</option>
+      <option value="Speed">Speed</option>
+      <option value="Weight">Weight</option>
+    </select>
+    
+    <div id="unit"></div>
+    <div id="output"></div>
+    
+  <script>
+
+    function getOption(option){
+        document.getElementById("unit").innerHTML = '';
+        document.getElementById("output").innerHTML = '';
+        if(option == "Temperature"){
+            //alert(option);
+            document.getElementById("unit").innerHTML=`
+            <p>
+            <label>Enter in Celcius:</label>
+            <input id="inputUnit" type="number" placeholder="Enter the value" oninput="Convertor('Temperature')">
+          </p>
+            `;
+        }else if(option == "Length"){
+            document.getElementById("unit").innerHTML=`
+            <p>
+            <label>Enter in meters:</label>
+            <input id="inputUnit" type="number" placeholder="Enter the value"  oninput="Convertor('Length')">
+            
+          </p>
+            `;
+        }else if(option == "Speed"){
+            document.getElementById("unit").innerHTML=`
+            <p>
+            <label>Enter in meters per sec:</label>
+            <input id="inputUnit" type="number" placeholder="Enter the value" oninput="Convertor('Speed')">
+            
+          </p>
+            `;
+        }else if(option == "Weight"){
+            document.getElementById("unit").innerHTML=`
+            <p>
+            <label>Enter in grams:</label>
+            <input id="inputUnit" type="number" placeholder="Enter the value" oninput="Convertor('Weight')">
+            
+          </p>
+            `;
+        }
+    }
+
+    function Convertor(value){
+        //alert(value);
+      
+        if(value == "Temperature"){
+            document.getElementById("output").innerHTML='';
+            var valNum = document.getElementById("inputUnit").value;
+            valNum = parseFloat(valNum);
+
+            document.getElementById("output").innerHTML += `
+            <p>Celcius: <span id="outputCelcius"></span></p>
+            <p>Kelvin: <span id="outputKelvin"></span></p>`;
+            
+            document.getElementById("outputCelcius").innerHTML=valNum;
+            document.getElementById("outputKelvin").innerHTML=(valNum-32/1.8)+273.15;
+
+        }else if(value == "Length"){
+            document.getElementById("output").innerHTML='';
+            
+            var valNum = document.getElementById("inputUnit").value;
+            valNum = parseFloat(valNum);
+
+            document.getElementById("output").innerHTML += `
+            <p>Meters: <span id="outputMetres"></span></p>
+            <p>Kilometers: <span id="outputKilometers"></span></p>`;
+            
+            document.getElementById("outputMetres").innerHTML=valNum;
+            document.getElementById("outputKilometers").innerHTML="Please insert the formula here!!";
+        }else if(value == "Speed"){
+            document.getElementById("output").innerHTML='';
+            
+            var valNum = document.getElementById("inputUnit").value;
+            valNum = parseFloat(valNum);
+
+            document.getElementById("output").innerHTML += `
+            <p>Meters per sec: <span id="outputMetres"></span></p>
+            <p>Kilometers per sec: <span id="outputKilometers"></span></p>`;
+            
+            document.getElementById("outputMetres").innerHTML=valNum;
+            document.getElementById("outputKilometers").innerHTML="Please insert the formula here!!";
+        
+        }else if(value == "Weight"){
+            document.getElementById("output").innerHTML='';
+
+            var valNum = document.getElementById("inputUnit").value;
+            valNum = parseFloat(valNum);
+
+            document.getElementById("output").innerHTML += `
+            <p>Grams: <span id="outputGrams"></span></p>
+            <p>Kilograms: <span id="outputKilograms"></span></p>`;
+            
+            document.getElementById("outputGrams").innerHTML=valNum;
+            document.getElementById("outputKilograms").innerHTML="Please insert the formula here!!";
+        
+        }
+    }
+  </script>
+</body>
+</html>

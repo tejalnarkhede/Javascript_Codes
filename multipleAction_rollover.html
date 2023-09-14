@@ -1,0 +1,66 @@
+<!DOCTYPE html PUBLIC
+"-//W3C//DTD XHTML 1.0 Transitional//EN">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Open Window</title>
+<script language="Javascript" type="text/javascript">
+
+function OpenNewWindow(book) {
+if (book== 1)
+{
+document.cover.src='7441805.gif'
+MyWindow = window.open(
+'', 'myAdWin', 'titlebar=0 status=0,toolbar=0, location=0, menubar=0,directories=0, resizable=0, height=50,width=150,left=500, top=400');
+MyWindow.document.write('10% Discount for Java Demystifi ed!');
+}
+if (book== 2)
+{
+document.cover.src='0072253630.jpeg'
+MyWindow = window.open('', 'myAdWin',
+'titlebar="0" status="0", toolbar="0",location="0", menubar="0", directories="0",resizable="0", height="50",width="150",left="500",top="500"');
+MyWindow.document.write('20% Discount for OOP Demystifi ed!');
+}
+if (book== 3)
+{
+document.cover.src='7417436.gif'
+MyWindow = window.open('', 'myAdWin',
+'titlebar="0" status="0", toolbar="0",location="0", menubar="0",directories="0", resizable="0",height="50", width="150",left="500",top="600"');
+MyWindow.document.write('15% Discount for Data Structures Demystifi ed!');
+}
+}
+
+</script>
+</head>
+<body>
+<TABLE width="100%" border="0">
+<TBODY>
+<TR vAlign="top">
+<TD width="50">
+<a>
+
+</a>
+</TD>
+<TD>
+
+</TD>
+<TD>
+<A onmouseover="OpenNewWindow(1)"
+onmouseout="MyWindow.close()">
+<B><U>Java Demystifi ed </U></B>
+</A>
+<BR>
+<A onmouseover="OpenNewWindow(2)"
+onmouseout="MyWindow.close()">
+<B><U>OOP Demystifi ed</U></B>
+</A>
+<BR>
+<A onmouseover="OpenNewWindow(3)"
+onmouseout="MyWindow.close()">
+<B><U>Data Structures Demystifi ed</U></B>
+</A>
+</TD>
+</TR>
+</TBODY>
+</TABLE>
+</body>
+</html>
